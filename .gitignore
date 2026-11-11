@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Local packed archives & backup archives
+*.tgz
+*.tar.gz
+*.zip
+
+# Operating System
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE & Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary / Log files
+*.log
+.temp/
+.cache/
+交付清单.md

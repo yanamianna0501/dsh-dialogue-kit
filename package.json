@@ -1,0 +1,28 @@
+{
+  "name": "dsh-dialogue-kit",
+  "version": "1.7.0",
+  "type": "module",
+  "description": "Inline selection comments, native quote cards and direct session controls for DeepSeek Harness (DSH).",
+  "license": "MIT",
+  "author": "yanamianna0501",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanamianna0501/dsh-dialogue-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yanamianna0501/dsh-dialogue-kit/issues"
+  },
+  "homepage": "https://github.com/yanamianna0501/dsh-dialogue-kit#readme",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "selection-comment",
+    "quote-reply"
+  ],
+  "engines": { "dsh": ">=0.2.2-rc.1 <0.3.0" },
+  "exports": { ".": "./host.js", "./client": "./client.js", "./locale/*.json": "./locale/*.json", "./icon": "./icon.svg" },
+  "files": ["host.js", "client.js", "client.source.js", "build.mjs", "logic.js", "*.test.js", "cordis.patch.yml", "locale/*.json", "icon.svg", "README.md", "DESIGN.md", "DECISIONS.md", "VERIFICATION.md"],
+  "scripts": { "test": "node --test *.test.js", "build": "node build.mjs && node --check host.js && node --check client.js && node --check logic.js", "package": "npm pack --ignore-scripts" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" }, "client": { "platform": "web", "immediately": true, "inject": ["@deepseek-ai/dsh-client-ui-conversation", "@deepseek-ai/dsh-client-ui-chat", "@deepseek-ai/dsh-client-locale"] } }
+}
